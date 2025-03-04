@@ -78,7 +78,7 @@ const TestimonialCarousel: React.FC = () => {
               >
                 "{testimonials[currentIndex].text}"
               </p>
-              <p className="font-semibold" data-oid="irwkq2z">
+              <p className={`font-semibold ${theme === "light" ? "text-black" : "text-white"}`} data-oid="irwkq2z">
                 {testimonials[currentIndex].name}
               </p>
               <p

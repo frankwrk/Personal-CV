@@ -30,7 +30,7 @@ const projects = [
   {
     id: 1,
     title: "E-commerce Redesign",
-    category: "Web Design",
+    category: "UX/UI Prototyping,Web Design and Development",
     image: "/placeholder.svg?height=600&width=600&text=E-commerce+Redesign",
     description:
       "A complete overhaul of an online store, focusing on user experience and conversion optimization.",
@@ -439,10 +439,10 @@ export default function Home() {
             <Card
               className={`${
                 theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"
-              } border-zinc-200 dark:border-zinc-800 p-4`}
+              } border-zinc-200 dark:border-zinc-800 p-2`}
               data-oid="nm-o68b"
             >
-              <CardContent className="space-y-4" data-oid="6o0vydf">
+              <CardContent className="p-1 md:p-2" data-oid="6o0vydf">
                 <p
                   className={`text-sm font-light ${theme === "light" ? "text-zinc-800" : "text-zinc-100"}`}
                   data-oid="lsew0j7"
@@ -479,7 +479,10 @@ export default function Home() {
                       "Prototyping",
                       "User Research",
                       "Figma",
-                      "Adobe XD",
+                      "Framer",
+                      "WordPress",
+                      "Webflow",
+                      "Adobe Suite",
                     ].map((skill, index) => (
                       <span
                         key={`skill-${skill}-${index}`}
