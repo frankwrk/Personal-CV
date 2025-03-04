@@ -16,10 +16,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Updated for Next.js 15
   experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
+    // Any Next.js 15 specific experimental features can be added here
   },
 }
 
