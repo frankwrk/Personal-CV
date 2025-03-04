@@ -40,15 +40,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto"
+        className="fixed inset-0 bg-black bg-opacity-70 flex items-start md:items-center justify-center z-50 p-2 sm:p-4 overflow-y-auto"
         onClick={onClose}
+        style={{ backdropFilter: 'blur(4px)' }}
         data-oid=".4zb3iz"
       >
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="w-full max-w-4xl"
+          className="w-full max-w-4xl max-h-[90vh] overflow-auto"
           onClick={(e) => e.stopPropagation()}
           data-oid="ibv2nnn"
         >
@@ -59,30 +60,33 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             data-oid="-uafu3s"
           >
             <CardContent className="p-0" data-oid="fv-g-8e">
-              <div className="relative h-64 md:h-96" data-oid="f8:3cu:">
+              <div className="relative h-48 sm:h-64 md:h-96" data-oid="f8:3cu:">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
                   className="object-cover"
                   data-oid="lv5vfmh"
+                  priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
                 <button
                   onClick={onClose}
-                  className="absolute top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-colors"
+                  className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white bg-black/70 hover:bg-black p-1.5 sm:p-2 rounded-full hover:scale-110 transition-all z-10"
+                  aria-label="Close modal"
                   data-oid="8nc02m8"
                 >
-                  <Cross2Icon width={24} height={24} data-oid="lkz-ny0" />
+                  <Cross2Icon width={20} height={20} data-oid="lkz-ny0" />
                 </button>
               </div>
-              <div className="p-6 space-y-6" data-oid="ypsdpo:">
+              <div className="p-4 sm:p-6 space-y-4 sm:space-y-6" data-oid="ypsdpo:">
                 <div data-oid="y1y.rz3">
-                  <h2 className="text-3xl font-bold mb-2" data-oid="9o_c.s_">
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" data-oid="9o_c.s_">
                     {project.title}
                   </h2>
                   <p
                     className={
-                      theme === "light" ? "text-zinc-600" : "text-zinc-400"
+                      `text-sm sm:text-base ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`
                     }
                     data-oid="wr17dli"
                   >
@@ -90,12 +94,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   </p>
                 </div>
                 <div data-oid="os1edfs">
-                  <h3 className="text-xl font-semibold mb-2" data-oid="b18fmf4">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2" data-oid="b18fmf4">
                     Overview
                   </h3>
                   <p
                     className={
-                      theme === "light" ? "text-zinc-700" : "text-zinc-300"
+                      `text-sm sm:text-base ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`
                     }
                     data-oid="spubh.-"
                   >
@@ -105,14 +109,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.challenge && (
                   <div data-oid="20geyxs">
                     <h3
-                      className="text-xl font-semibold mb-2"
+                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
                       data-oid="vbjz.ee"
                     >
                       Challenge
                     </h3>
                     <p
                       className={
-                        theme === "light" ? "text-zinc-700" : "text-zinc-300"
+                        `text-sm sm:text-base ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`
                       }
                       data-oid="omrgmpn"
                     >
@@ -123,14 +127,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.solution && (
                   <div data-oid="qf:mr-z">
                     <h3
-                      className="text-xl font-semibold mb-2"
+                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
                       data-oid="fnfb.wr"
                     >
                       Solution
                     </h3>
                     <p
                       className={
-                        theme === "light" ? "text-zinc-700" : "text-zinc-300"
+                        `text-sm sm:text-base ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`
                       }
                       data-oid="my9jlwz"
                     >
@@ -141,14 +145,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.process && (
                   <div data-oid="wnqeej0">
                     <h3
-                      className="text-xl font-semibold mb-2"
+                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
                       data-oid="h9gsj:t"
                     >
                       Process
                     </h3>
                     <p
                       className={
-                        theme === "light" ? "text-zinc-700" : "text-zinc-300"
+                        `text-sm sm:text-base ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`
                       }
                       data-oid="vwqq.nc"
                     >
@@ -159,14 +163,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.outcome && (
                   <div data-oid="dgba6h2">
                     <h3
-                      className="text-xl font-semibold mb-2"
+                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
                       data-oid="8.dkkdy"
                     >
                       Outcome
                     </h3>
                     <p
                       className={
-                        theme === "light" ? "text-zinc-700" : "text-zinc-300"
+                        `text-sm sm:text-base ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`
                       }
                       data-oid="678jji_"
                     >
@@ -180,15 +184,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 >
                   <button
                     onClick={onNextProject}
-                    className={`flex items-center ${
+                    className={`flex items-center text-sm sm:text-base ${
                       theme === "light"
                         ? "text-zinc-700 hover:text-black"
                         : "text-zinc-300 hover:text-white"
-                    } transition-colors`}
+                    } transition-colors hover:translate-x-1`}
                     data-oid="c4m1rnd"
                   >
                     Next Project
-                    <ArrowRightIcon width={20} height={20} className="ml-2" data-oid="47xna1u" />
+                    <ArrowRightIcon width={16} height={16} className="ml-1 sm:ml-2 sm:w-5 sm:h-5" data-oid="47xna1u" />
                   </button>
                 </div>
               </div>
