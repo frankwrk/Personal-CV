@@ -29,83 +29,93 @@ import { AnimatedGridPattern } from "@/components/animated-grid-pattern";
 const projects = [
   {
     id: 1,
-    title: "E-commerce Redesign",
-    category: "UX/UI Prototyping,Web Design and Development",
+    title: "Lesson Plans",
+    category: "UX/UI Prototyping, Web Design and Development",
     image: "/placeholder.svg?height=600&width=600&text=E-commerce+Redesign",
     description:
       "A complete overhaul of an online store, focusing on user experience and conversion optimization.",
     challenge:
-      "The existing e-commerce platform had a high cart abandonment rate and poor mobile experience.",
+      "",
+    approach:
+    "",
     solution:
-      "Implemented a responsive design with a streamlined checkout process and improved product discovery.",
+      "",
     process:
-      "Conducted user research, created wireframes and prototypes, and performed iterative user testing.",
+      "",
     outcome:
-      "Increased mobile conversions by 35% and reduced cart abandonment rate by 25%.",
+      "",
   },
   {
     id: 2,
-    title: "HealthTrack App",
-    category: "Mobile App",
+    title: "HMV Engineering",
+    category: "Website, Graphic Design, UX/UI prototyping",
     image: "/placeholder.svg?height=600&width=600&text=HealthTrack+App",
     description:
-      "A comprehensive health and fitness tracking application for iOS and Android platforms.",
+      "",
     challenge:
-      "Users found it difficult to maintain consistent health tracking habits and understand their progress.",
+    "",
+    approach:
+    "",
     solution:
-      "Developed an intuitive interface with personalized insights and gamification elements to encourage regular use.",
+      "",
     process:
-      "Conducted competitor analysis, user interviews, and created user personas to inform the design process.",
+      "",
     outcome:
-      "Achieved a 40% increase in daily active users and a 4.8-star rating on app stores.",
+      ""
   },
   {
     id: 3,
-    title: "Eco-Friendly Packaging",
-    category: "Branding",
+    title: "NovelEco",
+    category: "Branding, UX/UI prototyping, Web Design and Development",
     image: "/placeholder.svg?height=600&width=600&text=Eco-Friendly+Packaging",
     description:
-      "Sustainable packaging design for a line of organic beauty products, emphasizing environmental responsibility.",
+      "",
     challenge:
-      "Create packaging that aligns with the brand's eco-friendly values while maintaining product visibility and appeal.",
+    "",
+    approach:
+    "",
     solution:
-      "Designed minimalist packaging using recycled and biodegradable materials with clear product information.",
+      "",
     process:
-      "Researched sustainable materials, created multiple design concepts, and conducted focus group testing.",
+      "",
     outcome:
-      "Reduced packaging waste by 50% and increased brand perception scores for sustainability by 30%.",
+      ""
   },
   {
     id: 4,
-    title: "Smart Home Interface",
-    category: "UI/UX Design",
+    title: "Geoformations",
+    category: "UI/UX Design, Web Design and Development",
     image: "/placeholder.svg?height=600&width=600&text=Smart+Home+Interface",
     description:
-      "An intuitive interface for controlling smart home devices, designed for ease of use and accessibility.",
+      "",
     challenge:
-      "Simplify the control of multiple smart home devices through a single, user-friendly interface.",
+    "",
+    approach:
+    "",
     solution:
-      "Created a customizable dashboard with voice control and adaptive learning capabilities.",
+      "",
     process:
-      "Conducted usability studies, created user flow diagrams, and developed high-fidelity prototypes.",
+      "",
     outcome:
-      "Reduced the average time to complete common tasks by 60% and increased user satisfaction ratings by 45%.",
+      ""
   },
   {
     id: 5,
-    title: "Financial Dashboard",
-    category: "Data Visualization",
+    title: "Dublin Bonders",
+    category: "Graphic Design, UX/UI prototyping, Web Design and Development",
     image: "/placeholder.svg?height=600&width=600&text=Financial+Dashboard",
     description:
-      "A comprehensive financial dashboard for tracking investments, expenses, and financial goals.",
+      "",
     challenge:
-      "Present complex financial data in an easily understandable and actionable format for users.",
+    "",
+    approach:
+    "",
     solution:
-      "Designed an interactive dashboard with customizable widgets and clear data visualizations.",
+      "",
     process:
-      "Analyzed user needs, created information architecture, and conducted iterative design sprints.",
+      "",
     outcome:
-      "Improved user engagement with financial planning tools by 70% and received positive feedback for ease of use.",
+      ""
   },
 ];
 
@@ -483,6 +493,8 @@ export default function Home() {
                       "WordPress",
                       "Webflow",
                       "Adobe Suite",
+                      "Enterprise Architecture",
+                      "Enterprise Information Management",
                     ].map((skill, index) => (
                       <span
                         key={`skill-${skill}-${index}`}

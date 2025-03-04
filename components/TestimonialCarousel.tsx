@@ -23,15 +23,15 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "John Smith",
-    company: "HealthTech Solutions",
-    text: "Working with Francisc on our health tracking app was a game-changer. His intuitive design choices led to a significant increase in user engagement and retention.",
+    name: "Coming Soon...",
+    company: "",
+    text: "",
   },
   {
     id: 3,
-    name: "Emily Brown",
-    company: "EcoPackage Co.",
-    text: "Francisc's innovative approach to our packaging design not only aligned perfectly with our brand values but also resonated strongly with our environmentally conscious customers.",
+    name: "Coming Soon...",
+    company: "",
+    text: "",
   },
 ];
 
