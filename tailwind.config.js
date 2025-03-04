@@ -12,6 +12,39 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['var(--font-family-display)'],
+        text: ['var(--font-family-text)'],
+        ui: ['var(--font-family-ui)'],
+      },
+      fontSize: {
+        'xxs': 'var(--font-size-xxs)',
+        'xs': 'var(--font-size-xs)',
+        'sm': 'var(--font-size-sm)',
+        'base': 'var(--font-size-base)',
+        'md': 'var(--font-size-md)',
+        'lg': 'var(--font-size-lg)',
+        'xl': 'var(--font-size-xl)',
+        '2xl': 'var(--font-size-2xl)',
+        '3xl': 'var(--font-size-3xl)',
+        '4xl': 'var(--font-size-4xl)',
+      },
+      lineHeight: {
+        'none': 'var(--line-height-none)',
+        'tight': 'var(--line-height-tight)',
+        'snug': 'var(--line-height-snug)',
+        'normal': 'var(--line-height-normal)',
+        'relaxed': 'var(--line-height-relaxed)',
+        'loose': 'var(--line-height-loose)',
+      },
+      letterSpacing: {
+        'tighter': 'var(--letter-spacing-tighter)',
+        'tight': 'var(--letter-spacing-tight)',
+        'normal': 'var(--letter-spacing-normal)',
+        'wide': 'var(--letter-spacing-wide)',
+        'wider': 'var(--letter-spacing-wider)',
+        'widest': 'var(--letter-spacing-widest)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

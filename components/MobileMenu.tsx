@@ -3,14 +3,14 @@
 import type React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  X,
-  Linkedin,
-  Instagram,
-  Github,
-  Globe,
-  Phone,
-  Mail,
-} from "lucide-react";
+  Cross2Icon,
+  LinkedInLogoIcon,
+  InstagramLogoIcon,
+  GitHubLogoIcon,
+  GlobeIcon,
+  MobileIcon,
+  EnvelopeClosedIcon,
+} from "@radix-ui/react-icons";
 import { useTheme } from "@/contexts/ThemeContext";
 
 interface MobileMenuProps {
@@ -41,7 +41,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             } hover:text-black dark:hover:text-white`}
             data-oid="2eukln9"
           >
-            <X size={24} data-oid="qfd:esu" />
+            <Cross2Icon width={24} height={24} data-oid="qfd:esu" />
           </button>
           <nav className="mt-8" data-oid="eoq6kte">
             <ul className="space-y-4" data-oid="ue83jz3">
@@ -53,7 +53,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="k25888r"
                 >
-                  <Mail size={20} data-oid="yb2dd4g" />
+                  <EnvelopeClosedIcon width={20} height={20} data-oid="yb2dd4g" />
                   <span data-oid="9-5h2:y">Email</span>
                 </a>
               </li>
@@ -65,7 +65,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="fhyzo40"
                 >
-                  <Phone size={20} data-oid="4yt7xwn" />
+                  <MobileIcon width={20} height={20} data-oid="4yt7xwn" />
                   <span data-oid="r0s86ki">Phone</span>
                 </a>
               </li>
@@ -79,7 +79,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="06t3a_x"
                 >
-                  <Linkedin size={20} data-oid="uvk:onh" />
+                  <LinkedInLogoIcon width={20} height={20} data-oid="uvk:onh" />
                   <span data-oid="c_gp5lw">LinkedIn</span>
                 </a>
               </li>
@@ -93,7 +93,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="kyk9xvz"
                 >
-                  <Instagram size={20} data-oid="64clf0w" />
+                  <InstagramLogoIcon width={20} height={20} data-oid="64clf0w" />
                   <span data-oid="g31acw4">Instagram</span>
                 </a>
               </li>
@@ -107,7 +107,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="p5rsjib"
                 >
-                  <Github size={20} data-oid="nn1w1th" />
+                  <GitHubLogoIcon width={20} height={20} data-oid="nn1w1th" />
                   <span data-oid="osbznb2">GitHub</span>
                 </a>
               </li>
@@ -121,7 +121,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   } hover:text-black dark:hover:text-white transition-colors`}
                   data-oid="oy__af0"
                 >
-                  <Globe size={20} data-oid="um6escy" />
+                  <GlobeIcon width={20} height={20} data-oid="um6escy" />
                   <span data-oid="hty10bf">Website</span>
                 </a>
               </li>

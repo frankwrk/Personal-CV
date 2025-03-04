@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight } from "lucide-react";
+import { Cross2Icon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -72,7 +72,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   className="absolute top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition-colors"
                   data-oid="8nc02m8"
                 >
-                  <X size={24} data-oid="lkz-ny0" />
+                  <Cross2Icon width={24} height={24} data-oid="lkz-ny0" />
                 </button>
               </div>
               <div className="p-6 space-y-6" data-oid="ypsdpo:">
@@ -188,7 +188,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     data-oid="c4m1rnd"
                   >
                     Next Project
-                    <ArrowRight size={20} className="ml-2" data-oid="47xna1u" />
+                    <ArrowRightIcon width={20} height={20} className="ml-2" data-oid="47xna1u" />
                   </button>
                 </div>
               </div>

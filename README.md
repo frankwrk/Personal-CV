@@ -10,6 +10,7 @@ A modern, responsive personal CV/resume website built with Next.js, TypeScript, 
 - UI components from Radix UI
 - TypeScript for type safety
 - GitHub Avatar integration that automatically updates with your GitHub profile
+- Apple-inspired typography system with responsive text scaling
 
 ## Getting Started
 
@@ -92,6 +93,52 @@ To configure your GitHub username:
 1. Open `app/page.tsx`
 2. Find the line with `const githubUsername = "frankwrk";`
 3. Replace `frankwrk` with your own GitHub username
+
+## Typography System
+
+This website features an Apple-inspired typography system designed for optimal readability and aesthetics across all devices:
+
+### Features
+
+- Responsive font sizes using CSS clamp() for fluid typography
+- Consistent type hierarchy modeled after Apple's design language
+- Display, Heading, Body, and UI text styles
+- Font weight and letter spacing utilities
+- Optimized for readability on all screen sizes
+
+### Usage
+
+The typography system provides ready-to-use CSS classes:
+
+```jsx
+// Display Typography (for large headlines)
+<h1 className="display-1">Headline</h1>
+<h2 className="display-2">Headline</h2>
+<h3 className="display-3">Headline</h3>
+
+// Heading Typography
+<h2 className="heading-1">Section Heading</h2>
+<h3 className="heading-2">Subsection Heading</h3>
+<h4 className="heading-3">Minor Heading</h4>
+
+// Body Typography
+<p className="body-lg">Larger body text</p>
+<p className="body">Standard body text</p>
+<p className="body-sm">Smaller body text</p>
+
+// UI Typography
+<label className="ui-label">Form Label</label>
+<button className="ui-button">Button</button>
+<figcaption className="ui-caption">Image Caption</figcaption>
+```
+
+You can also use utility classes for font weights and letter spacing:
+
+```jsx
+<p className="body font-bold tracking-wide">Customized paragraph text</p>
+```
+
+Visit `/typography-demo` in your browser to see the complete typography system showcase.
 
 ## License
 

@@ -5,15 +5,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Linkedin,
-  Instagram,
-  Github,
-  Globe,
-  Phone,
-  Mail,
-  MessageCircle,
-  Menu,
-} from "lucide-react";
+  LinkedInLogoIcon,
+  InstagramLogoIcon,
+  GitHubLogoIcon,
+  GlobeIcon,
+  MobileIcon,
+  EnvelopeClosedIcon,
+  ChatBubbleIcon,
+  HamburgerMenuIcon,
+} from "@radix-ui/react-icons";
 import ContactFormModal from "@/components/ContactFormModal";
 import ProjectModal from "@/components/ProjectModal";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -214,14 +214,14 @@ export default function Home() {
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="up_bfsq"
           >
-            <Mail size={20} data-oid="wn6.6gd" />
+            <EnvelopeClosedIcon width={20} height={20} data-oid="wn6.6gd" />
           </a>
           <a
             href="tel:+11234567890"
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="jn79x62"
           >
-            <Phone size={20} data-oid="bak_:ix" />
+            <MobileIcon width={20} height={20} data-oid="bak_:ix" />
           </a>
           <a
             href="https://www.linkedin.com/in/yourprofile"
@@ -230,7 +230,7 @@ export default function Home() {
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="ivnqn-z"
           >
-            <Linkedin size={20} data-oid="03c6t0b" />
+            <LinkedInLogoIcon width={20} height={20} data-oid="03c6t0b" />
           </a>
           <a
             href="https://www.instagram.com/yourprofile"
@@ -239,7 +239,7 @@ export default function Home() {
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="g_x0sq1"
           >
-            <Instagram size={20} data-oid="5ztxz5m" />
+            <InstagramLogoIcon width={20} height={20} data-oid="5ztxz5m" />
           </a>
           <a
             href="https://github.com/yourusername"
@@ -248,7 +248,7 @@ export default function Home() {
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="8wrrwmx"
           >
-            <Github size={20} data-oid="cf_g8i8" />
+            <GitHubLogoIcon width={20} height={20} data-oid="cf_g8i8" />
           </a>
           <a
             href="https://www.yourbusinesswebsite.com"
@@ -257,7 +257,7 @@ export default function Home() {
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
             data-oid="s8lin0t"
           >
-            <Globe size={20} data-oid="8rrw6or" />
+            <GlobeIcon width={20} height={20} data-oid="8rrw6or" />
           </a>
           <ThemeToggle data-oid="86kcbwe" />
         </div>
@@ -267,11 +267,12 @@ export default function Home() {
         >
           <ThemeToggle data-oid="9wyklav" />
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(true)}
             className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white`}
             data-oid="3.eutxs"
           >
-            <Menu size={24} data-oid="cf6bcnj" />
+            <HamburgerMenuIcon width={24} height={24} data-oid="cf6bcnj" />
           </button>
         </div>
       </header>
@@ -329,6 +330,7 @@ export default function Home() {
               >
                 {projects.map((project) => (
                   <button
+                    type="button"
                     key={project.id}
                     onClick={() => setActiveProject(project)}
                     className={`text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 ${
@@ -377,6 +379,7 @@ export default function Home() {
                     {activeProject.description}
                   </p>
                   <button
+                    type="button"
                     className="px-3 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-sm font-medium transition-colors bg-white text-black hover:bg-zinc-200"
                     onClick={() => setIsProjectModalOpen(true)}
                     data-oid="py0t83e"
@@ -441,7 +444,7 @@ export default function Home() {
                       "Adobe XD",
                     ].map((skill, index) => (
                       <span
-                        key={index}
+                        key={`skill-${skill}-${index}`}
                         className={`px-2 py-1 rounded-full text-xs ${
                           theme === "light"
                             ? "bg-zinc-200 text-zinc-700"
@@ -475,6 +478,7 @@ export default function Home() {
                 >
                   {workExperiences.map((experience) => (
                     <button
+                      type="button"
                       key={experience.id}
                       onClick={() => setActiveExperience(experience)}
                       className={`text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 ${
@@ -524,14 +528,14 @@ export default function Home() {
             </Card>
 
             {/* Testimonial Section */}
-            <TestimonialCarousel data-oid="a4-4jou" />
+            <TestimonialCarousel />
           </div>
         </div>
       </main>
 
       {/* Footer */}
       <footer
-        className={`p-4 md:p-6 text-center ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}
+        className={`p-4 md:p-6 text-left ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}
         data-oid="299pr2a"
       >
         <p data-oid="egcpvo-">
@@ -542,6 +546,7 @@ export default function Home() {
 
       {/* Floating Action Button for Contact */}
       <button
+        type="button"
         onClick={() => setIsContactModalOpen(true)}
         className={`fixed bottom-8 right-8 rounded-full p-4 shadow-lg transition-colors ${
           theme === "light"
@@ -550,7 +555,7 @@ export default function Home() {
         }`}
         data-oid="silf3ly"
       >
-        <MessageCircle size={24} data-oid="412ey0o" />
+        <ChatBubbleIcon width={24} height={24} data-oid="412ey0o" />
       </button>
 
       <ContactFormModal
@@ -585,7 +590,7 @@ function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
       <div className="flex flex-wrap gap-2" data-oid=":rcc5nz">
         {skills.map((skill, index) => (
           <span
-            key={index}
+            key={`footerskill-${skill}-${index}`}
             className="px-2 py-1 bg-zinc-800 text-zinc-300 rounded-full text-xs"
             data-oid="v_7ku5f"
           >

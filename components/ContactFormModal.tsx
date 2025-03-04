@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { Cross2Icon } from "@radix-ui/react-icons";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -55,7 +55,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
                     className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white`}
                     data-oid="7g_h4_p"
                   >
-                    <X size={24} data-oid="l.hbozp" />
+                    <Cross2Icon width={24} height={24} data-oid="l.hbozp" />
                   </button>
                 </div>
                 <form className="space-y-4" data-oid="z53-t:p">

@@ -4,7 +4,7 @@ import type React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon, QuoteIcon } from "@radix-ui/react-icons";
 import { useTheme } from "@/contexts/ThemeContext";
 
 interface Testimonial {
@@ -17,9 +17,9 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Jane Doe",
-    company: "Tech Innovators Inc.",
-    text: "Francisc's redesign of our e-commerce platform resulted in a 40% increase in conversions. His attention to detail and user-centric approach made all the difference.",
+    name: "Rachel Breen",
+    company: "LessonPlans.ie",
+    text: "Francisc's redesign of our e-commerce platform resulted in a 40% increase in conversions from both vendors and customers. His attention to detail and design approach made all the difference.",
   },
   {
     id: 2,
@@ -56,9 +56,6 @@ const TestimonialCarousel: React.FC = () => {
       data-oid="s1z.pr9"
     >
       <CardContent className="p-6" data-oid="igvglqe">
-        <h3 className="text-2xl font-bold mb-4" data-oid="au_pxbn">
-          Client Testimonials
-        </h3>
         <div className="relative" data-oid="7vwxqlu">
           <AnimatePresence mode="wait" data-oid="uj.upr5">
             <motion.div
@@ -70,9 +67,9 @@ const TestimonialCarousel: React.FC = () => {
               className="text-center"
               data-oid="zaj2.9r"
             >
-              <Quote
+              <QuoteIcon
                 className={`mx-auto mb-4 ${theme === "light" ? "text-zinc-400" : "text-zinc-600"}`}
-                size={48}
+                width={48} height={48}
                 data-oid="2xcb5:h"
               />
               <p
@@ -93,6 +90,7 @@ const TestimonialCarousel: React.FC = () => {
             </motion.div>
           </AnimatePresence>
           <button
+            type="button"
             onClick={prevTestimonial}
             className={`absolute top-1/2 left-0 transform -translate-y-1/2 ${
               theme === "light"
@@ -102,9 +100,10 @@ const TestimonialCarousel: React.FC = () => {
             aria-label="Previous testimonial"
             data-oid="3r_5ne-"
           >
-            <ChevronLeft size={24} data-oid="51ihwqk" />
+            <ChevronLeftIcon width={24} height={24} data-oid="51ihwqk" />
           </button>
           <button
+            type="button"
             onClick={nextTestimonial}
             className={`absolute top-1/2 right-0 transform -translate-y-1/2 ${
               theme === "light"
@@ -114,7 +113,7 @@ const TestimonialCarousel: React.FC = () => {
             aria-label="Next testimonial"
             data-oid="4i23186"
           >
-            <ChevronRight size={24} data-oid=".k:s1gk" />
+            <ChevronRightIcon width={24} height={24} data-oid=".k:s1gk" />
           </button>
         </div>
       </CardContent>
