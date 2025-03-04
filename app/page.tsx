@@ -321,28 +321,39 @@ export default function Home() {
 
             {/* Menu Card */}
             <Card
-              className="absolute top-4 left-4 right-4 bg-black/30 backdrop-blur-md border-none"
+              className="absolute top-4 left-4 right-4 bg-black/30 backdrop-blur-md border-none p-0.5"
               data-oid="xtjfhrh"
             >
               <CardContent
-                className="flex justify-between items-center p-2 md:p-4 overflow-x-auto"
+                className="flex items-left justify-left p-2 md:p-4 overflow-x-auto"
+                style={{ alignItems: "left" }}
                 data-oid="vjj01xy"
               >
-                {projects.map((project) => (
-                  <button
-                    type="button"
-                    key={project.id}
-                    onClick={() => setActiveProject(project)}
-                    className={`text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 ${
-                      activeProject.id === project.id
-                        ? "text-white"
-                        : "text-zinc-400"
-                    } hover:text-white transition-colors`}
-                    data-oid=":ugef.r"
-                  >
-                    {project.title}
-                  </button>
-                ))}
+                <div className="flex items-left justify-left flex-grow">
+                  {projects.map((project) => (
+                    <button
+                      style={{
+                        background: activeProject.id === project.id ? "rgba(255, 255, 255, 0.20)" : "transparent",
+                        borderRadius: "0.5rem",
+                        padding: "0.5rem 1rem",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                      type="button"
+                      key={project.id}
+                      onClick={() => setActiveProject(project)}
+                      className={`text-xs md:text-sm font-medium whitespace-nowrap ${
+                        activeProject.id === project.id
+                          ? "text-white"
+                          : "text-zinc-200"
+                      } hover:text-white transition-colors`}
+                      data-oid=":ugef.r"
+                    >
+                      {project.title}
+                    </button>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
@@ -464,32 +475,35 @@ export default function Home() {
             <Card
               className={`${
                 theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"
-              } border-zinc-200 dark:border-zinc-800 overflow-hidden`}
+              } border-zinc-200 dark:border-zinc-800 overflow-hidden p-1 md:p-2`}
               data-oid="jx.cvbc"
             >
               {/* Menu Card */}
               <Card
-                className="bg-black/30 backdrop-blur-md border-none"
+                className="bg-black/30 backdrop-blur-md border-none p-0.5"
                 data-oid="9ob9bd9"
               >
                 <CardContent
-                  className="flex justify-between items-center p-2 md:p-4 overflow-x-auto"
+                  className="flex justify-left items-left p-1 md:p-2 overflow-x-auto gap-2"
                   data-oid="6m:6mir"
                 >
                   {workExperiences.map((experience) => (
-                    <button
+                    <motion.button
                       type="button"
                       key={experience.id}
                       onClick={() => setActiveExperience(experience)}
-                      className={`text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 ${
+                      initial={false}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`text-xs md:text-sm font-medium whitespace-nowrap px-2 py-1 rounded-md ${
                         activeExperience.id === experience.id
-                          ? "text-white"
-                          : "text-zinc-400"
-                      } hover:text-white transition-colors`}
+                          ? "bg-zinc-800 text-zinc-300"
+                          : "bg-zinc-200 text-zinc-700"
+                      }`}
                       data-oid="yomi5t-"
                     >
                       {experience.company}
-                    </button>
+                    </motion.button>
                   ))}
                 </CardContent>
               </Card>
