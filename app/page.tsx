@@ -23,7 +23,7 @@ import GitHubAvatar from "@/components/GitHubAvatar";
 import { useGitHubAvatar } from "@/hooks/useGitHubAvatar";
 import "./github-avatar.css";
 import { cn } from "@/lib/utils";
-import { AnimatedGridPattern } from "@/components/Animated-Grid-Pattern";
+import { AnimatedGridPattern } from "@/components/animated-grid-pattern";
 
 // Update the projects data to include more details
 const projects = [
