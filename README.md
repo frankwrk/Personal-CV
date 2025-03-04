@@ -35,9 +35,15 @@ yarn install
 
 3. Run the development server
 ```bash
+# Standard development server
 npm run dev
 # or
 yarn dev
+
+# With Turbopack for faster development (recommended)
+npm run dev:turbo
+# or
+yarn dev:turbo
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
@@ -49,6 +55,24 @@ npm run build
 # or
 yarn build
 ```
+
+## Development with Turbopack
+
+This project supports Turbopack, a new incremental bundler optimized for JavaScript and TypeScript, written in Rust, and built into Next.js. Turbopack offers significantly faster refresh and build times during development.
+
+To use Turbopack:
+
+```bash
+npm run dev:turbo
+# or
+yarn dev:turbo
+```
+
+Benefits of Turbopack:
+- Up to 10x faster startup times compared to webpack
+- Significantly faster refresh rates during development
+- More efficient hot module replacement (HMR)
+- Lower memory usage
 
 ## Deployment
 
