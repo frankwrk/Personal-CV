@@ -9,6 +9,7 @@ A modern, responsive personal CV/resume website built with Next.js, TypeScript, 
 - Styled with TailwindCSS
 - UI components from Radix UI
 - TypeScript for type safety
+- GitHub Avatar integration that automatically updates with your GitHub profile
 
 ## Getting Started
 
@@ -52,6 +53,21 @@ yarn build
 ## Deployment
 
 The project can be easily deployed to Vercel, Netlify, or any other platform that supports Next.js.
+
+## GitHub Avatar Integration
+
+This website includes a feature that automatically pulls your profile picture from GitHub:
+
+1. The avatar displayed next to your name comes directly from your GitHub profile
+2. When you update your GitHub profile picture, your website avatar updates automatically
+3. The website's favicon is also set to your GitHub profile picture
+4. A local copy of your GitHub avatar is stored for use as the favicon
+
+To configure your GitHub username:
+
+1. Open `app/page.tsx`
+2. Find the line with `const githubUsername = "frankwrk";`
+3. Replace `frankwrk` with your own GitHub username
 
 ## License
 

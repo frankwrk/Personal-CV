@@ -1,0 +1,27 @@
+/* Custom CSS for GitHub Avatar glowing effect */
+.avatar-glow {
+  border: 1px solid rgba(var(--primary-rgb), 0.3);
+  box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.2);
+  transition: all 0.3s ease;
+}
+
+.avatar-glow:hover {
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.4);
+}
+
+/* Pulse animation for additional subtle effect */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 8px rgba(var(--primary-rgb), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.3);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(var(--primary-rgb), 0.2);
+  }
+}
+
+.avatar-pulse {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
