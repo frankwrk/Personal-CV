@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -49,7 +49,7 @@ const TerminalCommand = ({ command, output }: { command: string; output: string 
       {output && (
         <div className="pl-4 ml-2 border-l-2 border-border font-mono text-xs text-muted-foreground">
           {output.split('\n').map((line, i) => (
-            <div key={i} className="py-0.5">{line}</div>
+            <div key={`output-line-${line}-${i}`} className="py-0.5">{line}</div>
           ))}
         </div>
       )}
@@ -216,7 +216,7 @@ export const TerminalUIShowcase = () => {
                 <div
                   style={{ width: `${(stat.count / 25000) * 100}%` }}
                   className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary"
-                ></div>
+                />
               </div>
             </div>
           ))}

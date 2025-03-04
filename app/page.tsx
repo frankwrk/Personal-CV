@@ -22,6 +22,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 import GitHubAvatar from "@/components/GitHubAvatar";
 import { useGitHubAvatar } from "@/hooks/useGitHubAvatar";
 import "./github-avatar.css";
+import { cn } from "@/lib/utils";
+import { AnimatedGridPattern } from "@/components/Animated-Grid-Pattern";
 
 // Update the projects data to include more details
 const projects = [
@@ -110,27 +112,30 @@ const projects = [
 const workExperiences = [
   {
     id: 1,
-    company: "TechCorp",
-    position: "Senior UX Designer",
+    company: "SYNQ Group LLC",
+    position: "Founder and UX/UI Designer",
+    location: "Boston, MA",
     period: "2020 - Present",
     description:
-      "Led the redesign of the company's flagship product, resulting in a 40% increase in user engagement.",
+      "Product Designer with extensive experience creating user-centered interfaces for educational research projects. Increased user engagement by 40% through responsive design implementation and cross-functional collaboration. Skilled in wireframing, prototyping, and visual design using Figma and WordPress. Conducted user research to validate solutions and facilitated stakeholder workshops to define project goals. Maintained brand consistency across digital products while ensuring seamless experiences across all devices. Notable projects include noveleco.eu, geoformations.eu, lessonplans.ie, hmvengineering.com, and dublinbonders.com",
   },
   {
     id: 2,
-    company: "DesignStudio",
-    position: "UI/UX Designer",
-    period: "2018 - 2020",
+    company: "Independent Freelancer",
+    position: "Digital Experience Designer",
+    location: "Dublin, Ireland",
+    period: "2016 - 2020",
     description:
-      "Collaborated with cross-functional teams to deliver user-centered designs for various client projects.",
+      "Product and Web Designer with a track record of creating user-centered interfaces for 60+ clients across multiple industries. Improved conversion rates by 25% through strategic information architecture and user journey mapping. Implemented iterative design processes incorporating usability testing and A/B testing to validate decisions and optimize experiences. Delivered responsive designs that enhanced mobile engagement while transforming complex business requirements into intuitive interfaces. Collaborated closely with clients to identify pain points and design opportunities, creating visual elements and UI components that effectively balanced aesthetics with usability.",
   },
   {
     id: 3,
-    company: "StartupX",
-    position: "Product Designer",
-    period: "2016 - 2018",
+    company: "Suntico Holdings",
+    position: "Technical Lead",
+    location: "Dublin, Ireland",
+    period: "2014 - 2017",
     description:
-      "Developed the initial design system and user interface for the company's mobile application.",
+      "Led the website redesign initiatives for Suntico Holdings, which enhanced user experience for business applications through a collaborative, user-centered approach. Created wireframes and interactive prototypes to effectively visualize concepts and gather stakeholder feedback. Collaborated closely with product managers to ensure design solutions aligned with business objectives while adhering to brand guidelines. Regularly presented design concepts to stakeholders across organizational levels and contributed to the development of company-wide design standards, establishing consistent visual language and design practices.",
   },
 ];
 
@@ -142,6 +147,9 @@ export default function Home() {
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [projectCardHeight, setProjectCardHeight] = useState("auto");
+  
+  // Explicitly set icon color based on current theme
+  const iconColor = theme === "light" ? "#121212" : "white";
 
   // GitHub username - replace with your own
   const githubUsername = "frankwrk";
@@ -176,118 +184,137 @@ export default function Home() {
   return (
     <>
       <div
-        className={`min-h-screen flex flex-col ${theme === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+        className="min-h-screen flex flex-col bg-white dark:bg-[#121212] text-foreground relative"
+        style={{
+          backgroundColor: theme === 'light' ? 'white' : '#121212'
+        }}
         data-oid="wg:t-8f"
       >
-      {/* Header */}
+        {/* Animated Grid Pattern Background */}
+        <AnimatedGridPattern
+          numSquares={50}
+          maxOpacity={0.08}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+            "absolute inset-0 -z-10",
+            "dark:fill-amber-400/5 dark:stroke-amber-400/10",
+            "fill-gray-400/10 stroke-gray-400/20"
+          )}
+        />
+      {/* Header with terminal-inspired styling */}
       <header
-        className="p-4 md:p-6 flex justify-between items-center"
+        className="p-4 md:p-6 flex justify-between items-center sticky top-0 z-50"
         data-oid="j0tlumk"
       >
         <div className="flex items-center space-x-4" data-oid="pfjbzku">
           <div className="relative w-12 h-12" data-oid="rq-ie.9">
             <GitHubAvatar
               username={githubUsername}
-              className="h-12 w-12 avatar-glow avatar-pulse"
+              className="h-13 w-13 avatar-glow avatar-pulse ring-2 ring-primary/30"
               fallback="FF"
               data-oid="gyap6zy"
             />
           </div>
           <div data-oid="f7axb1:">
-            <h1 className="text-lg font-medium" data-oid="5hqkzn6">
+            <h1 className="text-lg font-medium accent-element" data-oid="5hqkzn6">
               Francisc Furdui
             </h1>
-            <span
-              className={`text-sm ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}
-              data-oid="gf1h0i0"
-            >
-              Digital Experience Designer in Boston, MA
-            </span>
+            <div className="prompt inline-flex py-1 px-2 text-xs">
+              <span className="text-highlight mr-1">~</span> <span className="text-primary">Digital Experience Designer in Boston, MA</span> <span className="animate-pulse">_</span>
+            </div>
           </div>
         </div>
         <div
-          className="hidden md:flex items-center space-x-4"
+          className="hidden md:flex items-center space-x-4 glass-card py-2 px-4 rounded-full shadow-sm"
           data-oid="h_auzqi"
         >
           <a
-            href="mailto:your.email@example.com"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            href="mailto:francisc.frd@gmail.com"
+            className="hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="up_bfsq"
+            title="Email"
           >
-            <EnvelopeClosedIcon width={20} height={20} data-oid="wn6.6gd" />
+            <EnvelopeClosedIcon style={{ color: iconColor }} width={16} height={16} data-oid="wn6.6gd" />
           </a>
           <a
-            href="tel:+11234567890"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            href="tel:+18572009212"
+            className="hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="jn79x62"
+            title="Phone"
           >
-            <MobileIcon width={20} height={20} data-oid="bak_:ix" />
+            <MobileIcon style={{ color: iconColor }} width={16} height={16} data-oid="bak_:ix" />
           </a>
           <a
-            href="https://www.linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/franciscfurdui"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            className="text-muted-foreground hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="ivnqn-z"
+            title="LinkedIn"
           >
-            <LinkedInLogoIcon width={20} height={20} data-oid="03c6t0b" />
+            <LinkedInLogoIcon style={{ color: iconColor }} width={16} height={16} data-oid="03c6t0b" />
           </a>
           <a
-            href="https://www.instagram.com/yourprofile"
+            href="https://www.instagram.com/francisc_frd/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            className="text-muted-foreground hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="g_x0sq1"
+            title="Instagram"
           >
-            <InstagramLogoIcon width={20} height={20} data-oid="5ztxz5m" />
+            <InstagramLogoIcon style={{ color: iconColor }} width={16} height={16} data-oid="5ztxz5m" />
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/frankwrk"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            className="text-muted-foreground hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="8wrrwmx"
+            title="GitHub"
           >
-            <GitHubLogoIcon width={20} height={20} data-oid="cf_g8i8" />
+            <GitHubLogoIcon style={{ color: iconColor }} width={16} height={16} data-oid="cf_g8i8" />
           </a>
           <a
-            href="https://www.yourbusinesswebsite.com"
+            href="https://syn-q.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white transition-colors`}
+            className="text-muted-foreground hover:text-primary transition-colors h-7 w-7 flex items-center justify-center rounded-full hover:bg-secondary/20"
             data-oid="s8lin0t"
+            title="Website"
           >
-            <GlobeIcon width={20} height={20} data-oid="8rrw6or" />
+            <GlobeIcon style={{ color: iconColor }} width={16} height={16} data-oid="8rrw6or" />
           </a>
+          <div />
           <ThemeToggle data-oid="86kcbwe" />
         </div>
         <div
-          className="md:hidden flex items-center space-x-4"
+          className="md:hidden flex items-center space-x-3 glass-card py-2 px-3 rounded-full shadow-sm"
           data-oid="9y6xwhv"
         >
           <ThemeToggle data-oid="9wyklav" />
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(true)}
-            className={`${theme === "light" ? "text-zinc-600" : "text-zinc-400"} hover:text-black dark:hover:text-white`}
+            className="dark:text-white hover:text-primary/80 p-1 rounded-full hover:bg-secondary/20 transition-colors"
             data-oid="3.eutxs"
+            aria-label="Open menu"
           >
-            <HamburgerMenuIcon width={24} height={24} data-oid="cf6bcnj" />
+            <HamburgerMenuIcon style={{ color: iconColor }} width={22} height={22} data-oid="cf6bcnj" />
           </button>
         </div>
       </header>
 
-      {/* Main Content */}
+      {/* Main Content with terminal-inspired styling */}
       <main className="flex-grow p-4 md:p-6 overflow-y-auto" data-oid="c7c:a_g">
         <div
-          className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6"
+          className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 w-full"
           data-oid="c1y.c8l"
         >
-          {/* Large Project Card */}
+          {/* Terminal-Inspired Project Card */}
           <Card
-            className={`col-span-1 md:col-span-8 ${
-              theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"
-            } border-zinc-200 dark:border-zinc-800 relative overflow-hidden`}
+            className="col-span-1 md:col-span-8 bg-card border-border relative overflow-hidden glass-card shadow-lg"
             style={{ height: projectCardHeight }}
             data-oid="i7hd:xc"
           >
@@ -426,7 +453,7 @@ export default function Home() {
                   proven ability to collaborate cross-functionally.
                 </p>
                 <div data-oid="gq.v7-f">
-                  <h3 className="text-lg font-semibold mb-2" data-oid="vckydcv">
+                  <h3 className={`text-lg font-semibold mb-2 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="vckydcv">
                     Education
                   </h3>
                   <p
@@ -443,7 +470,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div data-oid="zbgm177">
-                  <h3 className="text-lg font-semibold mb-2" data-oid="hdz6:6u">
+                  <h3 className={`text-lg font-semibold mb-2 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="hdz6:6u">
                     Key Skills
                   </h3>
                   <div className="flex flex-wrap gap-2" data-oid="8szml5v">
@@ -480,7 +507,7 @@ export default function Home() {
             >
               {/* Menu Card */}
               <Card
-                className="bg-black/30 backdrop-blur-md border-none p-0.5"
+                className="border-none p-0.5"
                 data-oid="9ob9bd9"
               >
                 <CardContent
@@ -509,7 +536,7 @@ export default function Home() {
               </Card>
 
               {/* Experience Details */}
-              <CardContent className="p-4" data-oid="uvv9lyo">
+              <CardContent className="p-1" data-oid="uvv9lyo">
                 <AnimatePresence mode="wait" data-oid=".tn86p_">
                   <motion.div
                     key={activeExperience.id}
@@ -520,17 +547,22 @@ export default function Home() {
                     data-oid="xhv8x.w"
                   >
                     <div className="mb-4 last:mb-0" data-oid="ni4qlc9">
-                      <h4 className="text-lg font-medium" data-oid="svhhia9">
+                      <div className="mb-2">
+                        <span 
+                          className={`inline-block text-xs font-medium px-2 py-0.5 rounded-md ${theme === "light" ? "bg-amber-100 text-amber-800" : "bg-amber-950/40 text-amber-400"}`}
+                          data-oid="jtv1dzq"
+                        >
+                          {activeExperience.period}
+                        </span>
+                      </div>
+                      <h4 className={`text-lg font-medium ${theme === "light" ? "text-black" : "text-white"}`} data-oid="svhhia9">
                         {activeExperience.position}
                       </h4>
                       <p className="text-zinc-300 text-sm" data-oid=".q82spf">
                         {activeExperience.company}
                       </p>
-                      <p
-                        className="text-zinc-400 text-xs mb-2"
-                        data-oid="jtv1dzq"
-                      >
-                        {activeExperience.period}
+                      <p className="text-amber-500 dark:text-amber-400 text-xs font-medium mb-2">
+                        {activeExperience.location}
                       </p>
                       <p className="text-zinc-100 text-sm" data-oid="pmuwcid">
                         {activeExperience.description}
@@ -582,7 +614,7 @@ export default function Home() {
           cursor: 'pointer'
         }}
       >
-        <svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Contact Me">
           <path d="M12.5 3L2.5 3.00002C1.67157 3.00002 1 3.6716 1 4.50002V9.50003C1 10.3285 1.67157 11 2.5 11H7.50003C7.63264 11 7.75982 11.0527 7.85358 11.1465L10 13.2929V11.5C10 11.2239 10.2239 11 10.5 11H12.5C13.3284 11 14 10.3285 14 9.50003V4.5C14 3.67157 13.3284 3 12.5 3ZM2.49999 2.00002L12.5 2C13.8807 2 15 3.11929 15 4.5V9.50003C15 10.8807 13.8807 12 12.5 12H11V14.5C11 14.7022 10.8782 14.8845 10.6913 14.9619C10.5045 15.0393 10.2894 14.9965 10.1464 14.8536L7.29292 12H2.5C1.11929 12 0 10.8807 0 9.50003V4.50002C0 3.11931 1.11928 2.00003 2.49999 2.00002Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
         </svg>
       </button>

@@ -23,7 +23,7 @@ export default function ColorPalettePage() {
           </p>
         </div>
         
-        <div className="border-b border-border my-6"></div>
+        <div className="border-b border-border my-6" />
         
         <ColorPaletteShowcase />
       </div>

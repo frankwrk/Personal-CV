@@ -1,20 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
+/* Custom utilities */
+@layer {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-@layer base {
+/* Theme variables */
+@layer {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 100%; /* white */
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -49,7 +50,7 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 7%; /* #121212 */
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -84,11 +85,13 @@ body {
   }
 }
 
-@layer base {
+/* Theme variables */
+@layer {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }

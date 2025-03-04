@@ -6,19 +6,22 @@ import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
 
 const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
+  
+  // Use explicit colors based on the current theme
+  const iconColor = theme === "light" ? "#121212" : "white";
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 transition-colors"
+      className="w-7 h-7 flex items-center justify-center rounded-full hover:bg-secondary/20 transition-colors"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       data-oid="m.iqr6d"
     >
       {theme === "light" ? (
-        <MoonIcon width={20} height={20} data-oid="d4:z7ix" />
+        <MoonIcon width={16} height={16} style={{ color: iconColor }} data-oid="d4:z7ix" />
       ) : (
-        <SunIcon width={20} height={20} data-oid="9qtxuya" />
+        <SunIcon width={16} height={16} style={{ color: iconColor }} data-oid="9qtxuya" />
       )}
     </button>
   );

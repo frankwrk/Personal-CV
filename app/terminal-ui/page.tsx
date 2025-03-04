@@ -31,7 +31,7 @@ export default function TerminalUIPage() {
           </p>
         </div>
         
-        <div className="border-b border-border my-6"></div>
+        <div className="border-b border-border my-6" />
         
         <div className="prompt p-4 mb-6">
           <code className="text-sm">

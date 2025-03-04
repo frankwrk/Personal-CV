@@ -37,7 +37,7 @@
 }
 
 .dark .prompt {
-  background-color: rgba(18, 18, 18, 0.6); /* Color 13 */
+  background-color: rgba(250, 249, 246, 0.05); /* Color 13 */
   border-left: 3px solid rgb(206, 185, 142); /* Color 15 base without alpha */
 }
 

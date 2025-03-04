@@ -27,7 +27,19 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    
+    // First remove both classes to ensure clean state
+    document.documentElement.classList.remove("dark", "light");
+    
+    // Then add the appropriate class
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.add("light");
+    }
+    
+    // Also set a data attribute for additional CSS targeting if needed
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

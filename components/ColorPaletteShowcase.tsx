@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTheme } from '@/contexts/ThemeContext';
 
 type ColorSwatch = {
@@ -92,15 +92,15 @@ export const ColorPaletteShowcase = () => {
             <h4 className="heading-4 mb-2">Current Theme: {theme === 'light' ? 'Light' : 'Dark'}</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--background)' }}></div>
+                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--background)' }} />
                 <span className="text-sm">--background</span>
               </div>
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--foreground)' }}></div>
+                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--foreground)' }} />
                 <span className="text-sm">--foreground</span>
               </div>
               <div className="flex items-center">
-                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--primary)' }}></div>
+                <div className="w-6 h-6 rounded-full mr-2" style={{ backgroundColor: 'var(--primary)' }} />
                 <span className="text-sm">--primary</span>
               </div>
               <div className="flex items-center">

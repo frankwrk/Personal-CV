@@ -17,8 +17,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${interDisplay.variable} ${interText.variable} ${interUI.variable}`} data-oid="bhm5z22">
-      <body className="font-text antialiased" data-oid="ta2h6:0">
+    <html lang="en" className={`dark ${interDisplay.variable} ${interText.variable} ${interUI.variable}`} data-oid="bhm5z22">
+      <body className="font-text antialiased bg-background dark:bg-[#121212]" data-oid="ta2h6:0">
         <ThemeProvider data-oid="4n60bms">{children}</ThemeProvider>
       </body>
     </html>
