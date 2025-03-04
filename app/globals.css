@@ -1,55 +1,61 @@
 @import "tailwindcss";
 
 :root {
-    --background: hsl(0 0% 100%);
-    --foreground: hsl(240 10% 3.9%);
-    --card: hsl(0 0% 100%);
-    --card-foreground: hsl(240 10% 3.9%);
-    --popover: hsl(0 0% 100%);
-    --popover-foreground: hsl(240 10% 3.9%);
-    --primary: hsl(240 5.9% 10%);
-    --primary-rgb: 23, 23, 26; /* RGB values for primary color */
-    --primary-foreground: hsl(0 0% 98%);
-    --secondary: hsl(240 4.8% 95.9%);
-    --secondary-foreground: hsl(240 5.9% 10%);
-    --muted: hsl(240 4.8% 95.9%);
-    --muted-foreground: hsl(240 3.8% 46.1%);
-    --accent: hsl(240 4.8% 95.9%);
-    --accent-foreground: hsl(240 5.9% 10%);
-    --destructive: hsl(0 84.2% 60.2%);
-    --destructive-foreground: hsl(0 0% 98%);
-    --border: hsl(240 5.9% 90%);
-    --input: hsl(240 5.9% 90%);
-    --ring: hsl(240 5.9% 10%);
+    /* Light mode colors based on sketch palette */
+    --background: rgb(250, 249, 246); /* Color 7 */
+    --foreground: rgb(18, 18, 18); /* Color 5 */
+    --card: rgb(250, 249, 246); /* Color 7 */
+    --card-foreground: rgb(30, 30, 29); /* Color 9 */
+    --popover: rgb(250, 249, 246); /* Color 7 */
+    --popover-foreground: rgb(30, 30, 29); /* Color 9 */
+    --primary: rgb(189, 159, 101); /* Color 6 - Gold/Amber */
+    --primary-rgb: 189, 159, 101; /* RGB values for primary color */
+    --primary-foreground: rgb(250, 249, 246); /* Color 7 */
+    --secondary: rgb(250, 249, 246, 0.7); /* Color 22 */
+    --secondary-foreground: rgb(189, 159, 101); /* Color 6 */
+    --muted: rgb(250, 249, 246, 0.4); /* Color 20 */
+    --muted-foreground: rgb(111, 131, 159); /* Color 3 */
+    --accent: rgb(137, 121, 160); /* Color 4 - Purple accent */
+    --accent-foreground: rgb(250, 249, 246); /* Color 7 */
+    --highlight: rgb(52, 137, 92); /* Color 10 - Green highlight */
+    --highlight-foreground: rgb(250, 249, 246); /* Color 7 */
+    --destructive: rgb(255, 0, 0); 
+    --destructive-foreground: rgb(250, 249, 246); /* Color 7 */
+    --border: rgb(111, 131, 159, 0.3); /* Color 3 with opacity */
+    --input: rgb(250, 249, 246, 0.9); /* Color 23 */
+    --ring: rgb(189, 159, 101); /* Color 6 */
     --radius: 0.4rem;
-    --chart-1: hsl(240 5.9% 10%);
-    --chart-2: hsl(240 3.8% 46.1%);
+    --chart-1: rgb(189, 159, 101); /* Color 6 */
+    --chart-2: rgb(111, 131, 159); /* Color 3 */
   }
 
 .dark {
-    --background: hsl(240 10% 3.9%);
-    --foreground: hsl(0 0% 98%);
-    --card: hsl(240 10% 3.9%);
-    --card-foreground: hsl(0 0% 98%);
-    --popover: hsl(240 10% 3.9%);
-    --popover-foreground: hsl(0 0% 98%);
-    --primary: hsl(0 0% 98%);
-    --primary-rgb: 250, 250, 250; /* RGB values for primary color in dark mode */
-    --primary-foreground: hsl(240 5.9% 10%);
-    --secondary: hsl(240 3.7% 15.9%);
-    --secondary-foreground: hsl(0 0% 98%);
-    --muted: hsl(240 3.7% 15.9%);
-    --muted-foreground: hsl(240 5% 64.9%);
-    --accent: hsl(240 3.7% 15.9%);
-    --accent-foreground: hsl(0 0% 98%);
-    --destructive: hsl(0 62.8% 30.6%);
-    --destructive-foreground: hsl(0 0% 98%);
-    --border: hsl(240 3.7% 15.9%);
-    --input: hsl(240 3.7% 15.9%);
-    --ring: hsl(240 4.9% 83.9%);
+    /* Dark mode colors based on sketch palette */
+    --background: rgb(18, 18, 18); /* Color 5 */
+    --foreground: rgb(250, 249, 246); /* Color 7 */
+    --card: rgb(30, 30, 29); /* Color 9 */
+    --card-foreground: rgb(250, 249, 246); /* Color 7 */
+    --popover: rgb(30, 30, 29); /* Color 9 */
+    --popover-foreground: rgb(250, 249, 246); /* Color 7 */
+    --primary: rgb(206, 185, 142, 0.827); /* Color 15 - Gold accent with slight transparency */
+    --primary-rgb: 206, 185, 142; /* RGB values for primary color */
+    --primary-foreground: rgb(18, 18, 18); /* Color 5 */
+    --secondary: rgb(41, 41, 41, 0.5); /* Color 24 */
+    --secondary-foreground: rgb(206, 185, 142, 0.827); /* Color 15 */
+    --muted: rgb(64, 64, 64, 0.5); /* Color 25 */
+    --muted-foreground: rgb(206, 185, 142, 0.6); /* Color 15 with reduced opacity */
+    --accent: rgb(137, 121, 160); /* Color 4 - Purple accent */
+    --accent-foreground: rgb(18, 18, 18); /* Color 5 */
+    --highlight: rgb(52, 137, 92); /* Color 10 - Green highlight */
+    --highlight-foreground: rgb(18, 18, 18); /* Color 5 */
+    --destructive: rgb(255, 0, 0);
+    --destructive-foreground: rgb(250, 249, 246); /* Color 7 */
+    --border: rgb(64, 64, 64, 0.5); /* Color 25 */
+    --input: rgb(41, 41, 41, 0.5); /* Color 24 */
+    --ring: rgb(206, 185, 142, 0.827); /* Color 15 */
     --radius: 0.4rem;
-    --chart-1: hsl(0 0% 98%);
-    --chart-2: hsl(240 5% 64.9%);
+    --chart-1: rgb(206, 185, 142, 0.827); /* Color 15 */
+    --chart-2: rgb(137, 121, 160); /* Color 4 */
   }
 
 /* Custom theme variables */

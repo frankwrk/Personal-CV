@@ -1,34 +1,211 @@
 /* 
   New York Theme Enhancements
   These styles enhance the New York style variant from Shadcn/UI
-  with additional typography and design elements inspired by Apple.
+  with additional typography and design elements inspired by modern terminal/tech UI.
+  Colors are from the Sketch palette provided.
 */
 
 /* Add subtle gradients to buttons */
 .btn-gradient {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.04));
+  background-image: linear-gradient(to bottom, rgba(250, 249, 246, 0.1), rgba(0, 0, 0, 0.03));
+  transition: all 0.2s ease;
 }
 
 .dark .btn-gradient {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.02));
+  background-image: linear-gradient(to bottom, rgba(206, 185, 142, 0.08), rgba(0, 0, 0, 0.05));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Gold accent elements */
+.dark .accent-element {
+  color: rgb(206, 185, 142); /* Color 15 base without alpha */
+  text-shadow: 0 0 1px rgba(206, 185, 142, 0.2);
+}
+
+.accent-element {
+  color: rgb(189, 159, 101); /* Color 6 */
+}
+
+/* Command line prompt styling */
+.prompt {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(250, 249, 246, 0.05); /* Color 7 with low opacity */
+  color: rgb(189, 159, 101); /* Color 6 */
+  border-left: 3px solid rgb(137, 121, 160); /* Color 4 - Purple accent */
+}
+
+.dark .prompt {
+  background-color: rgba(18, 18, 18, 0.6); /* Color 13 */
+  border-left: 3px solid rgb(206, 185, 142); /* Color 15 base without alpha */
 }
 
 /* Enhance card styling */
 .card {
   border-width: 1px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Glass card styling */
+.glass-card {
+  background-color: rgba(250, 249, 246, 0.7); /* Off white with alpha */
+  backdrop-filter: blur(12px);
+  border-width: 1px;
+  border-color: rgba(189, 159, 101, 0.15); /* Gold with low alpha */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(189, 159, 101, 0.25); /* Gold with higher alpha */
+}
+
+/* Dark mode cards */
+.dark .card {
+  background-color: rgba(30, 30, 29, 0.7); /* Color 9 with alpha */
+  border-color: rgba(206, 185, 142, 0.1); /* Color 15 with low alpha */
 }
 
 .dark .card:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(206, 185, 142, 0.2); /* Color 15 with higher alpha */
+}
+
+/* Dark mode glass cards */
+.dark .glass-card {
+  background-color: rgba(18, 18, 18, 0.8); /* Dark gray with alpha */
+  border-color: rgba(206, 185, 142, 0.2); /* Soft gold with alpha */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark .glass-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  border-color: rgba(206, 185, 142, 0.3); /* Soft gold with higher alpha */
+}
+
+/* Highlight cards - for featured content */
+.highlight-card.dark {
+  border-left: 3px solid rgb(206, 185, 142); /* Color 15 base */
+}
+
+.highlight-card {
+  border-left: 3px solid rgb(189, 159, 101); /* Color 6 */
 }
 
 /* Enhanced form controls */
+input, select, textarea {
+  border-radius: 0.3rem;
+  transition: all 0.2s ease;
+  border-width: 1px;
+}
+
+.dark input, .dark select, .dark textarea {
+  background-color: rgba(18, 18, 18, 0.9); /* Color 14 */
+  border-color: rgba(206, 185, 142, 0.15); /* Color 15 with low alpha */
+}
+
+.dark input:focus, .dark select:focus, .dark textarea:focus {
+  border-color: rgba(206, 185, 142, 0.5); /* Color 15 with medium alpha */
+  box-shadow: 0 0 0 2px rgba(206, 185, 142, 0.15); /* Color 15 with low alpha */
+}
+
+/* Terminal-style code blocks */
+pre, code {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  border-radius: 0.4rem;
+}
+
+.dark pre, .dark code {
+  background-color: rgba(18, 18, 18, 0.9); /* Color 14 */
+  border: 1px solid rgba(206, 185, 142, 0.1); /* Color 15 with low alpha */
+  color: rgb(52, 137, 92); /* Color 10 - Green highlight */
+}
+
+/* Modern button styles */
+button {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 0.4rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+}
+
+.dark .primary-btn {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .primary-btn:hover {
+  background-color: rgb(206, 185, 142); /* Color 15 full opacity */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.dark .tooltip-text {
+  background-color: rgba(30, 30, 29, 0.95); /* Color 9 with high alpha */
+  border-color: rgba(206, 185, 142, 0.2); /* Color 15 with low alpha */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Terminal animations */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .form-control-refined {
   border-width: 1px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;

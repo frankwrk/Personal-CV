@@ -3,11 +3,12 @@
 import type React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "system";
 
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -34,7 +35,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }} data-oid="ehmz:4o">
+    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }} data-oid="ehmz:4o">
       {children}
     </ThemeContext.Provider>
   );

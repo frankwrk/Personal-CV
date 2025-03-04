@@ -1,0 +1,4 @@
+1. Use the latest version of NextJS: ^15.2.1
+2. Use the latest version of Shadcn/UI: @latest
+3. Use the latest version of Tailwind: ^4
+4. Use the latest version of React: ^19.0.0
