@@ -33,12 +33,10 @@
   border-radius: 0.25rem;
   background-color: rgba(250, 249, 246, 0.05); /* Color 7 with low opacity */
   color: rgb(189, 159, 101); /* Color 6 */
-  border-left: 3px solid rgb(137, 121, 160); /* Color 4 - Purple accent */
 }
 
 .dark .prompt {
   background-color: rgba(250, 249, 246, 0.05); /* Color 13 */
-  border-left: 3px solid rgb(206, 185, 142); /* Color 15 base without alpha */
 }
 
 /* Enhance card styling */
@@ -46,6 +44,11 @@
   border-width: 1px;
   transition: all 0.25s ease;
   backdrop-filter: blur(8px);
+}
+
+/* Gold-bordered card for light mode */
+.gold-border {
+  border-color: rgba(189, 159, 101, 0.15) !important;
 }
 
 .card:hover {

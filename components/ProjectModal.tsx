@@ -60,19 +60,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             data-oid="-uafu3s"
           >
             <CardContent className="p-0" data-oid="fv-g-8e">
-              <div className="relative h-48 sm:h-64 md:h-96" data-oid="f8:3cu:">
+              <div className="relative h-48 sm:h-64 md:h-96 overflow-hidden" data-oid="f8:3cu:">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   data-oid="lv5vfmh"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
                 <button
                   onClick={onClose}
-                  className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white bg-black/70 hover:bg-black p-1.5 sm:p-2 rounded-full hover:scale-110 transition-all z-10"
+                  className="absolute top-3 right-3 z-20 text-white bg-black/80 hover:bg-black/90 p-1.5 sm:p-2 rounded-full hover:scale-110 transition-all shadow-md"
                   aria-label="Close modal"
                   data-oid="8nc02m8"
                 >
@@ -81,7 +81,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               </div>
               <div className="p-4 sm:p-6 space-y-4 sm:space-y-6" data-oid="ypsdpo:">
                 <div data-oid="y1y.rz3">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" data-oid="9o_c.s_">
+                  <h2 className={`text-2xl sm:text-3xl font-bold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`} data-oid="9o_c.s_">
                     {project.title}
                   </h2>
                   <p
@@ -94,7 +94,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                   </p>
                 </div>
                 <div data-oid="os1edfs">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2" data-oid="b18fmf4">
+                  <h3 className={`text-lg sm:text-xl font-semibold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`} data-oid="b18fmf4">
                     Overview
                   </h3>
                   <p
@@ -109,7 +109,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.challenge && (
                   <div data-oid="20geyxs">
                     <h3
-                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
+                      className={`text-lg sm:text-xl font-semibold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`}
                       data-oid="vbjz.ee"
                     >
                       Challenge
@@ -127,7 +127,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.solution && (
                   <div data-oid="qf:mr-z">
                     <h3
-                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
+                      className={`text-lg sm:text-xl font-semibold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`}
                       data-oid="fnfb.wr"
                     >
                       Solution
@@ -145,7 +145,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.process && (
                   <div data-oid="wnqeej0">
                     <h3
-                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
+                      className={`text-lg sm:text-xl font-semibold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`}
                       data-oid="h9gsj:t"
                     >
                       Process
@@ -163,7 +163,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.outcome && (
                   <div data-oid="dgba6h2">
                     <h3
-                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
+                      className={`text-lg sm:text-xl font-semibold mb-1 sm:mb-2 ${theme === "light" ? "text-zinc-900" : "text-white"}`}
                       data-oid="8.dkkdy"
                     >
                       Outcome

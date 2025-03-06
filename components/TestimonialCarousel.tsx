@@ -52,10 +52,10 @@ const TestimonialCarousel: React.FC = () => {
 
   return (
     <Card
-      className={`${theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"} border-zinc-200 dark:border-zinc-800`}
+      className={`${theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"} ${theme === "light" ? "gold-border" : "border-zinc-800"}`}
       data-oid="s1z.pr9"
     >
-      <CardContent className="p-6" data-oid="igvglqe">
+      <CardContent className="p-3 md:p-4" data-oid="igvglqe">
         <div className="relative" data-oid="7vwxqlu">
           <AnimatePresence mode="wait" data-oid="uj.upr5">
             <motion.div
@@ -68,12 +68,12 @@ const TestimonialCarousel: React.FC = () => {
               data-oid="zaj2.9r"
             >
               <QuoteIcon
-                className={`mx-auto mb-4 ${theme === "light" ? "text-zinc-400" : "text-zinc-600"}`}
-                width={48} height={48}
+                className={`mx-auto mb-2 ${theme === "light" ? "text-zinc-400" : "text-zinc-600"}`}
+                width={32} height={32}
                 data-oid="2xcb5:h"
               />
               <p
-                className={`text-lg mb-4 ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}
+                className={`text-sm md:text-base mb-2 ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}
                 data-oid="igcbo6."
               >
                 "{testimonials[currentIndex].text}"

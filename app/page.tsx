@@ -31,7 +31,7 @@ const projects = [
     id: 1,
     title: "Lesson Plans",
     category: "UX/UI Prototyping, Web Design and Development",
-    image: "/placeholder.svg?height=600&width=600&text=E-commerce+Redesign",
+    image: "/lp.png?height=600&width=600&text=Lesson+Plans",
     description:
       "A complete overhaul of an online store, focusing on user experience and conversion optimization.",
     challenge:
@@ -49,7 +49,7 @@ const projects = [
     id: 2,
     title: "HMV Engineering",
     category: "Website, Graphic Design, UX/UI prototyping",
-    image: "/placeholder.svg?height=600&width=600&text=HealthTrack+App",
+    image: "/HMV.svg?height=600&width=600&text=HMV+Engineering",
     description:
       "",
     challenge:
@@ -67,7 +67,7 @@ const projects = [
     id: 3,
     title: "NovelEco",
     category: "Branding, UX/UI prototyping, Web Design and Development",
-    image: "/placeholder.svg?height=600&width=600&text=Eco-Friendly+Packaging",
+    image: "/noveleco.gif?height=600&width=600&text=NovelEco",
     description:
       "",
     challenge:
@@ -85,7 +85,7 @@ const projects = [
     id: 4,
     title: "Geoformations",
     category: "UI/UX Design, Web Design and Development",
-    image: "/placeholder.svg?height=600&width=600&text=Smart+Home+Interface",
+    image: "/geormations-case.png?height=600&width=600&text=Geoformations",
     description:
       "",
     challenge:
@@ -103,7 +103,7 @@ const projects = [
     id: 5,
     title: "Dublin Bonders",
     category: "Graphic Design, UX/UI prototyping, Web Design and Development",
-    image: "/placeholder.svg?height=600&width=600&text=Financial+Dashboard",
+    image: "/dublin-bonders-case.png?height=600&width=600&text=Dublin+Bonders",
     description:
       "",
     challenge:
@@ -127,7 +127,7 @@ const workExperiences = [
     location: "Boston, MA",
     period: "2020 - Present",
     description:
-      "Product Designer with extensive experience creating user-centered interfaces for educational research projects. Increased user engagement by 40% through responsive design implementation and cross-functional collaboration. Skilled in wireframing, prototyping, and visual design using Figma and WordPress. Conducted user research to validate solutions and facilitated stakeholder workshops to define project goals. Maintained brand consistency across digital products while ensuring seamless experiences across all devices. Notable projects include noveleco.eu, geoformations.eu, lessonplans.ie, hmvengineering.com, and dublinbonders.com",
+      "As a Product Designer at my own company, I created user-centered interfaces for educational research projects that significantly improved user engagement. I increased engagement metrics by 40% through responsive design implementation and close collaboration with cross-functional teams. My expertise includes wireframing, prototyping, and visual design using Figma and WordPress. I conducted user research to validate my solutions and facilitated stakeholder workshops to define project goals. Throughout my work, I maintained brand consistency while ensuring seamless experiences across all devices. Some of my notable projects are included as case studies on this page.",
   },
   {
     id: 2,
@@ -136,7 +136,7 @@ const workExperiences = [
     location: "Dublin, Ireland",
     period: "2016 - 2020",
     description:
-      "Product and Web Designer with a track record of creating user-centered interfaces for 60+ clients across multiple industries. Improved conversion rates by 25% through strategic information architecture and user journey mapping. Implemented iterative design processes incorporating usability testing and A/B testing to validate decisions and optimize experiences. Delivered responsive designs that enhanced mobile engagement while transforming complex business requirements into intuitive interfaces. Collaborated closely with clients to identify pain points and design opportunities, creating visual elements and UI components that effectively balanced aesthetics with usability.",
+      "As a freelance Product and Web Designer, I crafted user-centered interfaces for more than 60 clients spanning multiple industries. I improved client conversion rates by 25% through strategic information architecture and detailed user journey mapping. My design process incorporated usability testing and A/B testing to validate decisions and optimize experiences. I delivered responsive designs that enhanced mobile engagement and transformed complex business requirements into intuitive interfaces. Working closely with clients, I identified pain points and design opportunities to create visual elements and UI components that balanced aesthetics with usability.",
   },
   {
     id: 3,
@@ -145,7 +145,7 @@ const workExperiences = [
     location: "Dublin, Ireland",
     period: "2014 - 2017",
     description:
-      "Led the website redesign initiatives for Suntico Holdings, which enhanced user experience for business applications through a collaborative, user-centered approach. Created wireframes and interactive prototypes to effectively visualize concepts and gather stakeholder feedback. Collaborated closely with product managers to ensure design solutions aligned with business objectives while adhering to brand guidelines. Regularly presented design concepts to stakeholders across organizational levels and contributed to the development of company-wide design standards, establishing consistent visual language and design practices.",
+      "At Suntico, I led thewebsite redesign initiative that enhanced the user experience for business applications through my collaborative, user-centered approach. I created wireframes and interactive prototypes to visualize concepts and gather valuable stakeholder feedback. Working closely with product managers, I ensured my design solutions aligned with business objectives while adhering to brand guidelines. I regularly presented my design concepts to stakeholders across various organizational levels and contributed to developing company-wide design standards, establishing a consistent visual language and design practices.",
   },
 ];
 
@@ -215,10 +215,10 @@ export default function Home() {
         />
       {/* Header with terminal-inspired styling */}
       <header
-        className="p-4 md:p-6 flex justify-between items-center sticky top-0 z-50"
+        className="p-3 md:p-4 flex justify-between items-center sticky top-0 z-50"
         data-oid="j0tlumk"
       >
-        <div className="flex items-center space-x-4" data-oid="pfjbzku">
+        <div className="flex items-center space-x-4 glass-card py-2 px-4 rounded-xl shadow-sm" data-oid="pfjbzku">
           <div className="relative w-12 h-12" data-oid="rq-ie.9">
             <GitHubAvatar
               username={githubUsername}
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="hidden md:flex items-center space-x-4 glass-card py-2 px-4 rounded-full shadow-sm"
+          className="hidden md:flex items-center space-x-4 glass-card py-2 px-4 rounded-xl shadow-sm"
           data-oid="h_auzqi"
         >
           <a
@@ -300,7 +300,7 @@ export default function Home() {
           <ThemeToggle data-oid="86kcbwe" />
         </div>
         <div
-          className="md:hidden flex items-center space-x-3 glass-card py-2 px-3 rounded-full shadow-sm"
+          className="md:hidden flex items-center space-x-3 glass-card py-2 px-3 rounded-xl shadow-sm"
           data-oid="9y6xwhv"
         >
           <ThemeToggle data-oid="9wyklav" />
@@ -317,14 +317,14 @@ export default function Home() {
       </header>
 
       {/* Main Content with terminal-inspired styling */}
-      <main className="flex-grow p-4 md:p-6 overflow-y-auto" data-oid="c7c:a_g">
+      <main className="flex-grow p-3 md:p-4 overflow-y-auto" data-oid="c7c:a_g">
         <div
-          className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 w-full"
+          className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 w-full"
           data-oid="c1y.c8l"
         >
           {/* Terminal-Inspired Project Card */}
           <Card
-            className="col-span-1 md:col-span-8 bg-card border-border relative overflow-hidden glass-card shadow-lg"
+            className="col-span-1 md:col-span-8 bg-card relative overflow-hidden glass-card shadow-lg gold-border"
             style={{ height: projectCardHeight }}
             data-oid="i7hd:xc"
           >
@@ -396,7 +396,7 @@ export default function Home() {
 
             {/* Project Details */}
             <div
-              className="absolute bottom-0 left-0 right-0 p-4 md:p-6"
+              className="absolute bottom-0 left-0 right-0 p-3 md:p-4"
               data-oid="_m6gduk"
             >
               <AnimatePresence mode="wait" data-oid="tehuo63">
@@ -421,7 +421,7 @@ export default function Home() {
                     {activeProject.category}
                   </p>
                   <p
-                    className="mb-4 text-xs md:text-sm text-zinc-400"
+                    className="mb-2 text-xs md:text-sm text-zinc-400"
                     data-oid="z3xy36x"
                   >
                     {activeProject.description}
@@ -449,10 +449,10 @@ export default function Home() {
             <Card
               className={`${
                 theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"
-              } border-zinc-200 dark:border-zinc-800 p-2`}
+              } ${theme === "light" ? "gold-border" : "border-zinc-800"} p-1`}
               data-oid="nm-o68b"
             >
-              <CardContent className="p-1 md:p-2" data-oid="6o0vydf">
+              <CardContent className="p-1 md:p-2 space-y-2" data-oid="6o0vydf">
                 <p
                   className={`text-sm font-light ${theme === "light" ? "text-zinc-800" : "text-zinc-100"}`}
                   data-oid="lsew0j7"
@@ -463,7 +463,7 @@ export default function Home() {
                   proven ability to collaborate cross-functionally.
                 </p>
                 <div data-oid="gq.v7-f">
-                  <h3 className={`text-lg font-semibold mb-2 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="vckydcv">
+                  <h3 className={`text-base font-semibold mb-1 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="vckydcv">
                     Education
                   </h3>
                   <p
@@ -480,7 +480,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div data-oid="zbgm177">
-                  <h3 className={`text-lg font-semibold mb-2 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="hdz6:6u">
+                  <h3 className={`text-base font-semibold mb-1 ${theme === "light" ? "text-black" : "text-white"}`} data-oid="hdz6:6u">
                     Key Skills
                   </h3>
                   <div className="flex flex-wrap gap-2" data-oid="8szml5v">
@@ -517,7 +517,7 @@ export default function Home() {
             <Card
               className={`${
                 theme === "light" ? "bg-zinc-100" : "bg-zinc-900/50"
-              } border-zinc-200 dark:border-zinc-800 overflow-hidden p-1 md:p-2`}
+              } ${theme === "light" ? "gold-border" : "border-zinc-800"} overflow-hidden p-1`}
               data-oid="jx.cvbc"
             >
               {/* Menu Card */}
@@ -526,7 +526,7 @@ export default function Home() {
                 data-oid="9ob9bd9"
               >
                 <CardContent
-                  className="flex justify-left items-left p-1 md:p-2 overflow-x-auto gap-2"
+                  className="flex justify-left items-left p-1 overflow-x-auto gap-1"
                   data-oid="6m:6mir"
                 >
                   {workExperiences.map((experience) => (
@@ -573,13 +573,13 @@ export default function Home() {
                       <h4 className={`text-lg font-medium ${theme === "light" ? "text-black" : "text-white"}`} data-oid="svhhia9">
                         {activeExperience.position}
                       </h4>
-                      <p className="text-zinc-300 text-sm" data-oid=".q82spf">
+                      <p className={`text-sm ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`} data-oid=".q82spf">
                         {activeExperience.company}
                       </p>
-                      <p className="text-amber-500 dark:text-amber-400 text-xs font-medium mb-2">
+                      <p className="text-amber-700 dark:text-amber-400 text-xs font-medium mb-2">
                         {activeExperience.location}
                       </p>
-                      <p className="text-zinc-100 text-sm" data-oid="pmuwcid">
+                      <p className={`text-sm ${theme === "light" ? "text-zinc-800" : "text-zinc-100"}`} data-oid="pmuwcid">
                         {activeExperience.description}
                       </p>
                     </div>
@@ -596,7 +596,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer
-        className={`p-4 md:p-6 text-left ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}
+        className={`p-2 md:p-3 text-left text-xs ${theme === "light" ? "text-zinc-600" : "text-zinc-400"}`}
         data-oid="299pr2a"
       >
         <p data-oid="egcpvo-">
